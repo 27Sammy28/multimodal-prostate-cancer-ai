@@ -1,0 +1,2 @@
+model,feature_extractor,roc_auc,pr_auc,f1,ece,brier_score,threshold
+cnn_deep_feature_baseline,deterministic_patch_projection,1.0,1.0,1.0,0.0017042728837678475,1.1038557537357272e-05,0.5
