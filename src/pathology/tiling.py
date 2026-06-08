@@ -1,7 +1,5 @@
-slide.read_region(...)
-
-import openslide
 import numpy as np
+import openslide
 
 
 def extract_tiles(
@@ -10,26 +8,27 @@ def extract_tiles(
     n_tiles=32,
     downsample=32
 ):
-    slide = openslide.OpenSlide(slide_path)
+
+    slide = openslide.OpenSlide(str(slide_path))
 
     level = slide.get_best_level_for_downsample(
         downsample
     )
 
-    tiles = []
-
     width, height = slide.level_dimensions[level]
+
+    tiles = []
 
     for _ in range(n_tiles):
 
         x = np.random.randint(
             0,
-            width - tile_size
+            max(1, width - tile_size)
         )
 
         y = np.random.randint(
             0,
-            height - tile_size
+            max(1, height - tile_size)
         )
 
         tile = np.array(
