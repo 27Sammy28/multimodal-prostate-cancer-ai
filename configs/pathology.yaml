@@ -1,0 +1,22 @@
+dataset:
+  name: PANDA
+  image_dir: data/raw/train_images
+  mask_dir: data/raw/train_label_masks
+  metadata_file: data/raw/train.csv
+
+preprocessing:
+  tile_size: 256
+  tiles_per_slide: 32
+  magnification: 20
+  stain_normalization: true
+  tissue_threshold: 0.7
+
+training:
+  batch_size: 8
+  num_workers: 4
+  epochs: 50
+  seed: 42
+
+target:
+  label: isup_grade
+  num_classes: 6
