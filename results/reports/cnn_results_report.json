@@ -1,0 +1,10 @@
+{
+  "model": "cnn_deep_feature_baseline",
+  "feature_extractor": "deterministic_patch_projection",
+  "roc_auc": 1.0,
+  "pr_auc": 1.0,
+  "f1": 1.0,
+  "ece": 0.0017042728837678475,
+  "brier_score": 1.1038557537357272e-05,
+  "threshold": 0.5
+}

@@ -1,0 +1,2 @@
+n_tiles,n_handcrafted_features,n_deep_features,dimensionality_reduction
+32,68,128,pca_fallback

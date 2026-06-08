@@ -1,0 +1,31 @@
+{
+  "purpose": "MRI-informed prostate cancer risk stratification for clinical decision support",
+  "important_note": "This pipeline is inspired by published clinical decision-support workflows, but it is not an exact reproduction of any Karolinska Institutet model.",
+  "modalities_supported": [
+    "clinical",
+    "biomarker",
+    "MRI/radiomics CSV features"
+  ],
+  "future_fusion_modalities": [
+    "MRI CNN embeddings",
+    "pathology embeddings",
+    "biomarkers",
+    "clinical variables"
+  ],
+  "metrics": {
+    "model": "logistic",
+    "data_source": "synthetic",
+    "target": "diagnosis_result",
+    "positive_label": "M",
+    "n_train": 400,
+    "n_test": 100,
+    "numeric_features": "age;psa;prostate_volume;pi_rads;adc_mean;lesion_size;biomarker_score",
+    "categorical_features": "family_history",
+    "roc_auc": 0.9195075757575757,
+    "pr_auc": 0.6598987646507641,
+    "f1": 0.5365853658536586,
+    "ece": 0.24501811994227343,
+    "brier_score": 0.1364910859001298,
+    "threshold": 0.5
+  }
+}
