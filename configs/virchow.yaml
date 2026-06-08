@@ -1,0 +1,16 @@
+model:
+  name: virchow
+
+embeddings:
+  dimension: 2560
+
+inference:
+  tile_size: 224
+  batch_size: 32
+
+output:
+  save_embeddings: true
+  embedding_dir: results/embeddings/virchow
+
+hardware:
+  device: cuda
