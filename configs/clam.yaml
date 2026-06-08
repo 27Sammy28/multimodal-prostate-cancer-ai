@@ -1,0 +1,20 @@
+model:
+  name: CLAM_SB
+
+input:
+  embedding_dim: 2560
+
+training:
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  epochs: 100
+  batch_size: 1
+
+attention:
+  gated: true
+
+output:
+  checkpoint_dir: results/checkpoints/clam
+
+task:
+  prediction_target: isup_grade
