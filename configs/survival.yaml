@@ -1,0 +1,21 @@
+task:
+  type: survival_prediction
+
+model:
+  name: DeepSurv
+
+training:
+  learning_rate: 0.0001
+  batch_size: 32
+  epochs: 100
+
+targets:
+  - recurrence_free_survival
+  - progression_free_survival
+
+metrics:
+  - concordance_index
+  - integrated_brier_score
+
+output:
+  checkpoint_dir: results/checkpoints/survival
